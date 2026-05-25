@@ -1,3 +1,18 @@
+---
+// ARQCOR Construcciones · Landing premium
+// Zapopan, Jalisco · Arquitectura contemporánea minimalista
+const proyecto = {
+  nombre: "Retorno Los Naranjos",
+  ubicacion: "Zapopan · Jalisco",
+  superficie: "364",
+  niveles: "3",
+  habitaciones: "4",
+  banos: "4.5",
+  estilo: "Contemporáneo minimalista",
+  entrega: "2025"
+};
+---
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -47,15 +62,31 @@
 
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  /* WhatsApp FAB */
+  .wa-fab {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    z-index: 9999;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.45);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+  }
+  .wa-fab:hover { transform: scale(1.12); box-shadow: 0 6px 32px rgba(37,211,102,0.65); }
+  .wa-fab svg { width: 32px; height: 32px; fill: #fff; }
+
   body {
     margin: 0;
     background: var(--green-700);
     color: var(--cream-50);
     font-family: var(--ff-body);
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.6;
-    letter-spacing: 0.005em;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -1612,7 +1643,7 @@
           <span>Rev · <strong>03</strong></span>
         </div>
         <div class="viz-meta-r">
-          <span>Sup. construida · <strong>364 m²</strong></span>
+          <span>Sup. construida · <strong>{proyecto.superficie} m²</strong></span>
           <span class="viz-meta-sep">/</span>
           <span>Niveles · <strong>03</strong></span>
         </div>
@@ -2079,18 +2110,18 @@
       <button class="filter-btn active" data-filter="all">Todo<span class="count">12</span></button>
       <button class="filter-btn" data-filter="naranjos">Casa Los Naranjos<span class="count">4</span></button>
       <button class="filter-btn" data-filter="eden">El Edén<span class="count">4</span></button>
-      <button class="filter-btn" data-filter="pymsa">Pymsa<span class="count">4</span></button>
+      <button class="filter-btn" data-filter="pymsa">Proyectos empresariales<span class="count">3</span></button>
     </div>
 
     <div class="portfolio-grid" id="portfolioGrid">
 
       <!-- ===== CASA LOS NARANJOS ===== -->
       <article class="pf-card size-wide" data-project="naranjos" data-cat="residencial" data-id="1"
-               data-img="public/arqcor/render-12.jpg"
+               data-img="/arqcor/render-12.jpg"
                data-title="Doble altura con muro de piedra" data-loc="Zapopan, JAL" data-year="2024"
                data-area="364 m²" data-niv="3" data-rec="4"
                data-desc="Espacio social principal con muro de piedra natural, escalera flotante con peldaños en madera y jardín interior. Doble altura con vidrio piso a techo.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-12.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-12.jpg');"></div>
         <div class="pf-overlay"></div>
         <div class="pf-tag">Caso estrella</div>
         <button class="pf-expand" aria-label="Ver">＋</button>
@@ -2102,26 +2133,26 @@
       </article>
 
       <article class="pf-card size-reg" data-project="pymsa" data-cat="comercial" data-id="2"
-               data-img="public/arqcor/render-09.jpg"
+               data-img="/arqcor/render-09.jpg"
                data-title="Pérgolas en azotea corporativa" data-loc="Guadalajara, JAL" data-year="2024"
                data-area="680 m²" data-niv="—" data-rec="—"
                data-desc="Sistema modular de pérgolas en azotea con vista a la ciudad. Área de comedor y descanso para colaboradores con sombrillas, jardinería y mobiliario exterior.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-09.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-09.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
-          <div class="cat">Pymsa · Exterior</div>
+          <div class="cat">Proyectos empresariales · Exterior</div>
           <h4>Pérgolas azotea</h4>
           <div class="sub">GDL · 680 m² · 2024</div>
         </div>
       </article>
 
       <article class="pf-card size-reg" data-project="eden" data-cat="residencial" data-id="3"
-               data-img="public/arqcor/render-04.jpg"
+               data-img="/arqcor/render-04.jpg"
                data-title="Modelo con celosía de madera" data-loc="Zapopan, JAL" data-year="2023"
                data-area="210 m²" data-niv="2" data-rec="3"
                data-desc="Fachada del modelo premium con celosía vertical de madera, columnas de piedra y volumetría asimétrica. Acceso lateral con jardín perimetral.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-04.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-04.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
@@ -2132,11 +2163,11 @@
       </article>
 
       <article class="pf-card size-tall" data-project="naranjos" data-cat="exteriores" data-id="4"
-               data-img="public/arqcor/render-07.jpg"
+               data-img="/arqcor/render-07.jpg"
                data-title="Terraza con pérgola y muro de piedra" data-loc="Zapopan, JAL" data-year="2024"
                data-area="86 m²" data-niv="—" data-rec="—"
                data-desc="Patio interior con pérgola de acero, glicina trepadora, muro de piedra natural y comedor exterior. Vidrios corredizos conectan con la sala.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-07.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-07.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
@@ -2147,11 +2178,11 @@
       </article>
 
       <article class="pf-card size-big" data-project="eden" data-cat="exteriores" data-id="5"
-               data-img="public/arqcor/render-01.jpg"
+               data-img="/arqcor/render-01.jpg"
                data-title="Fachada principal del modelo" data-loc="Zapopan, JAL" data-year="2023"
                data-area="210 m²" data-niv="2" data-rec="3"
                data-desc="Vista principal de fachada con paramento de piedra apilada, ventanal corrido y composición de volúmenes blancos. Acceso vehicular incluido.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-01.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-01.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
@@ -2162,26 +2193,26 @@
       </article>
 
       <article class="pf-card size-reg" data-project="pymsa" data-cat="comercial" data-id="6"
-               data-img="public/arqcor/render-08.jpg"
+               data-img="/arqcor/render-08.jpg"
                data-title="Terraza corporativa con identidad de marca" data-loc="Guadalajara, JAL" data-year="2024"
                data-area="320 m²" data-niv="—" data-rec="—"
                data-desc="Vista cenital de terraza corporativa Pymsa con doble pérgola, módulo central con identidad de marca y áreas zonificadas de descanso.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-08.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-08.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
-          <div class="cat">Pymsa · Exterior</div>
+          <div class="cat">Proyectos empresariales · Exterior</div>
           <h4>Terraza corporativa</h4>
           <div class="sub">GDL · 320 m² · 2024</div>
         </div>
       </article>
 
       <article class="pf-card size-reg" data-project="naranjos" data-cat="interiores" data-id="7"
-               data-img="public/arqcor/render-05.jpg"
+               data-img="/arqcor/render-05.jpg"
                data-title="Escalera flotante sobre jardín interior" data-loc="Zapopan, JAL" data-year="2024"
                data-area="42 m²" data-niv="3" data-rec="—"
                data-desc="Escalera voladiza de acero negro con peldaños de madera, sobre jardín interior. Comedor formal con muro lateral en blanco roto y luminaria suspendida.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-05.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-05.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
@@ -2192,11 +2223,11 @@
       </article>
 
       <article class="pf-card size-big" data-project="eden" data-cat="exteriores" data-id="8"
-               data-img="public/arqcor/render-02.jpg"
+               data-img="/arqcor/render-02.jpg"
                data-title="Vista esquina del modelo" data-loc="Zapopan, JAL" data-year="2023"
                data-area="210 m²" data-niv="2" data-rec="3"
                data-desc="Composición volumétrica de la esquina del modelo con celosía de persiana metálica, paramento de piedra y jardín perimetral con árbol joven.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-02.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-02.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
@@ -2207,26 +2238,26 @@
       </article>
 
       <article class="pf-card size-reg" data-project="pymsa" data-cat="interiores" data-id="9"
-               data-img="public/arqcor/render-11.jpg"
+               data-img="/arqcor/render-11.jpg"
                data-title="Vestidores y servicios para colaboradores" data-loc="Guadalajara, JAL" data-year="2024"
                data-area="48 m²" data-niv="1" data-rec="—"
                data-desc="Área de vestidores con lockers metálicos, lavabo de piedra reconstituida y muros aparentes de bloque ecológico. Iluminación natural cenital.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-11.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-11.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
-          <div class="cat">Pymsa · Interior</div>
+          <div class="cat">Proyectos empresariales · Interior</div>
           <h4>Vestidores</h4>
           <div class="sub">GDL · 48 m² · 2024</div>
         </div>
       </article>
 
       <article class="pf-card size-reg" data-project="naranjos" data-cat="interiores" data-id="10"
-               data-img="public/arqcor/render-06.jpg"
+               data-img="/arqcor/render-06.jpg"
                data-title="Sala y cocina abierta" data-loc="Zapopan, JAL" data-year="2024"
                data-area="54 m²" data-niv="2" data-rec="—"
                data-desc="Family room conectado con cocina abierta. Isla central de madera oscura, gabinetes en nogal, sala blanca con piezas de arte fotográfico enmarcadas.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-06.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-06.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
@@ -2236,27 +2267,14 @@
         </div>
       </article>
 
-      <article class="pf-card size-tall" data-project="pymsa" data-cat="comercial" data-id="11"
-               data-img="public/arqcor/render-10.jpg"
-               data-title="Caseta de acceso PiSA" data-loc="Guadalajara, JAL" data-year="2023"
-               data-area="36 m²" data-niv="1" data-rec="—"
-               data-desc="Caseta de acceso al complejo corporativo con muros de bloque ecológico, plafón en losa aligerada y fachada de identidad corporativa con marca PiSA.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-10.jpg');"></div>
-        <div class="pf-overlay"></div>
-        <button class="pf-expand" aria-label="Ver">＋</button>
-        <div class="pf-meta">
-          <div class="cat">Pymsa · Exterior</div>
-          <h4>Caseta de acceso</h4>
-          <div class="sub">GDL · 36 m² · 2023</div>
-        </div>
-      </article>
+
 
       <article class="pf-card size-reg" data-project="eden" data-cat="interiores" data-id="12"
-               data-img="public/arqcor/render-03.jpg"
+               data-img="/arqcor/render-03.jpg"
                data-title="Interior del modelo: sala, comedor y cocina" data-loc="Zapopan, JAL" data-year="2023"
                data-area="62 m²" data-niv="1" data-rec="—"
                data-desc="Espacio integral del modelo con cocina abierta, isla central, comedor para seis personas y sala con orientación al jardín posterior. Plafón con vigas decorativas.">
-        <div class="pf-visual" style="background-image: url('public/arqcor/render-03.jpg');"></div>
+        <div class="pf-visual" style="background-image: url('/arqcor/render-03.jpg');"></div>
         <div class="pf-overlay"></div>
         <button class="pf-expand" aria-label="Ver">＋</button>
         <div class="pf-meta">
@@ -2763,7 +2781,7 @@
   const projectNames = {
     naranjos: 'Casa Los Naranjos',
     eden: 'El Edén',
-    pymsa: 'Pymsa'
+    pymsa: 'Proyectos empresariales'
   };
 
   filterBtns.forEach(btn => {
@@ -2927,6 +2945,13 @@
 
 })();
 </script>
+
+<!-- WhatsApp FAB -->
+<a class="wa-fab" href="https://wa.me/5213312636780?text=Hola%20ARQCOR%2C%20me%20interesa%20una%20consulta%20gratuita%20para%20mi%20proyecto" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 
 </body>
 </html>
